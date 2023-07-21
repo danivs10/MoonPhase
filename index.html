@@ -1,26 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <canvas class="webgl"></canvas>
-    <nav>
-      <a href="/">Sphere</a>
-      <ul>
-        <li>
-          Explore
-        </li>
-        <li>
-          Create
-        </li>
-      </ul>
-    </nav>
-    <h1 class="title">Give it a spin</h1>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Limelight&family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <title>MOONDATE</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Add the styles.css file -->
+</head>
+<body>
+  <nav>
+    <a class="home" href="/">MOONDATE</a>
+    <ul>
+      <li>
+        Explore
+      </li>
+      <li>
+        Create
+      </li>
+      <li>
+        About us
+      </li>
+    </ul>
+  </nav>
+  <canvas class="webgl"></canvas>
+
+  <div class="selector">
+    <h1 class="title">PICK A DATE</h1>
+  <div class="datetime-container">
+    <input type="datetime-local" id="datetimePicker" />
+    <div class="button-container">
+      <button disabled class="submit-button">
+        <span class="arrow-icon">&#10148;</span>
+      </button>
+    </div>
+  </div>
+  </div>
+  <div class="panel-container">
+    <div class="purchase-panel">
+      <h1>Gift the Moon</h1>
+      <h2>A Celestial Symbol of Eternal Love!</h2>
+      <p>Surprise your beloved with an ethereal token of your boundless love. Own a piece of the moon, captured at that enchanting moment you both hold dear. A celestial keepsake, forever illuminating your journey of love and togetherness. Make this unique gift a radiant symbol of your eternal devotion!</p>
+      <div class="purchase-options">
+        <button class="purchase-button">Buy Now</button>
+        <button class="cancel-button">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div id="app"></div>
+  <script type="module" src="/main.js"></script>
+</body>
 </html>

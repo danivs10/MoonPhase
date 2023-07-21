@@ -7,6 +7,7 @@
 body, html {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+  background-color: black;
 }
 
 .webgl {
@@ -14,6 +15,7 @@ body, html {
   top: 0;
   left: 0;
   z-index: 1;
+  transition: all 2s;
 }
 
 nav {
@@ -23,6 +25,8 @@ nav {
   padding: 4rem 8rem;
   display: flex;
   justify-content: space-between;
+  font-family: 'Castoro Titling', cursive;
+  font-weight: 400;
 }
 
 nav a {
@@ -37,12 +41,185 @@ nav ul {
   gap: 4rem;
 }
 
-.title {
-  color: white;
-  z-index: 2;
+h1 {
+  font-family: 'Castoro Titling', cursive;
+  font-weight: 400;
+  font-size: 2.5rem ;
+}
+h2 {
+  font-family: 'Castoro Titling', cursive;
+  font-weight: 400;
+  font-size: 1.2rem ;
+}
+
+p {
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+.selector {
   position: absolute;
-  font-size: 3rem;
   left: 50%;
   top: 90%;
   transform: translate(-50%, -75%);
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.title {
+  color: white;
+  z-index: 3;
+  font-size: 2.5rem;
+  justify-content: center;
+  font-family: 'Limelight', cursive;
+}
+
+.datetime-container {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  color: rgb(207, 207, 207);
+  z-index: 3;
+  cursor: pointer;
+}
+
+input[type="datetime-local"] {
+  padding: 10px;
+  border: none;
+  background-color: #c2c2c2;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;}
+
+input[type="datetime-local"]::-webkit-datetime-edit-year-field,
+input[type="datetime-local"]::-webkit-datetime-edit-month-field,
+input[type="datetime-local"]::-webkit-datetime-edit-day-field,
+input[type="datetime-local"]::-webkit-datetime-edit-hour-field,
+input[type="datetime-local"]::-webkit-datetime-edit-minute-field {
+  color: #333;
+}
+
+
+.button-container {
+  margin-left: 20px;
+  z-index: 4;
+}
+
+
+.button-container.show {
+  opacity: 1; /* Show the button when class "show" is added */
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  opacity: 0.2; 
+  transition: opacity 0.3s ease;
+  cursor: default;
+}
+
+
+.submit-button:enabled:hover {
+  background-color: white;
+}
+.submit-button:enabled {
+  cursor: pointer;
+  opacity: 1; 
+}
+
+
+.submit-button:enabled:hover span{
+  filter: invert(1);
+}
+
+.arrow-icon {
+  font-size: 24px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+
+.panel-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  margin: 50px;
+  height: 70%;
+  border-radius: 20px;
+  transform: translate( 0%, -50%);
+  background-color: #333333; /* Use the desired color HEX code */
+  box-shadow: -6px 6px 2px rgba(138, 138, 138, 0.31);
+  z-index: 5;
+  transition: width 1s ease;
+  overflow: hidden;
+  padding: 1%;
+  min-width: 365px;
+  display: none;
+}
+
+.panel-container.show {
+  display: block;
+  width: 30%;
+}
+
+.purchase-panel {
+  color: white;
+  padding: 20px;
+  min-width: 365px;
+}
+
+.purchase-panel h2 {
+  margin-top: 1em;
+}
+
+.purchase-panel p {
+  margin-top: 3em;
+  margin-bottom: 5em;
+  font-family: 'Nunito', sans-serif;
+
+  
+}
+
+.purchase-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.purchase-button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.purchase-button {
+  background-color: white;
+  color: black;
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: white;
+}
+
+.cancel-button:hover {
+  color: #ff3333;
 }
